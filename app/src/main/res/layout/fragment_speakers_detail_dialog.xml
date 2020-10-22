@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.SpeakersDetailDialogFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+        <Toolbar
+            android:id="@+id/tbConference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
-</FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ivSpeakerPicture"
+                android:layout_width="@dimen/heightImageViewHome"
+                android:layout_height="@dimen/heightImageViewHome"
+                android:src="@drawable/ic_person"
+                android:layout_centerHorizontal="true"
+                android:alpha="100"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivSpeakerPicture"
+                app:cardCornerRadius="@dimen/cardCornerRadius"
+                android:elevation="@dimen/cardElevation"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvSpeakerDetai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="speaker name"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <TextView
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="job title"
+                    android:textSize="@dimen/subtitleSize"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:id="@+id/tvSpeakerDetailJob"
+                        android:layout_marginBottom="@dimen/marginText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="trabajo"
+                        android:textSize="@dimen/titleSize"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryDark" />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/twitterimg"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:id="@+id/tvSpeakerDetaiBiography"
+                        android:layout_margin="@dimen/marginText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="biography"
+                        android:textSize="@dimen/subtitleSize"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
