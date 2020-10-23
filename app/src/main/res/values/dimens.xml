@@ -8,6 +8,7 @@
     <dimen name="cardElevation">4dp</dimen>
     <dimen name="cardMargin">15dp</dimen>
 
+    <dimen name="bigTitleSize">30sp</dimen>
     <dimen name="titleSize">20sp</dimen>
     <dimen name="subtitleSize">15sp</dimen>
 

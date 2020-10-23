@@ -21,7 +21,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -68,8 +68,7 @@
                         android:text="00:00"
                         android:textColor="@color/colorPrimary"
                         android:gravity="center"
-                        android:layout_centerInParent="true"
-                        android:layout_margin="5dp"/>
+                        android:layout_margin="@dimen/marginText"/>
                     <TextView
                         android:id="@+id/tvDetailConferenceSpeaker"
                         android:layout_width="match_parent"
@@ -78,9 +77,7 @@
                         android:text="NOMBRE EXPOSITOR"
                         android:textColor="@color/colorPrimary"
                         android:gravity="center"
-                        android:layout_centerInParent="true"
-                        android:textStyle="bold"
-                        android:layout_margin="5dp"/>
+                        android:textStyle="bold" />
                     <TextView
                         android:id="@+id/tvDetailConferenceTag"
                         android:layout_width="match_parent"
@@ -89,8 +86,7 @@
                         android:text="Tag"
                         android:textColor="@color/colorPrimary"
                         android:gravity="center"
-                        android:layout_centerInParent="true"
-                        android:layout_margin="5dp"/>
+                        android:layout_margin="@dimen/marginText"/>
                         <TextView
                             android:id="@+id/tvDetailConferenceDescription"
                             android:layout_width="match_parent"
@@ -99,8 +95,7 @@
                             android:text="Detaslle de la conferencia"
                             android:textColor="@color/colorPrimary"
                             android:gravity="center"
-                            android:layout_centerInParent="true"
-                            android:layout_margin="5dp"/>
+                            android:layout_marginBottom="@dimen/marginText"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

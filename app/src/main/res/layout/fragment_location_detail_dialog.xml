@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Toolbar
+            android:id="@+id/tbLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"
+                        android:src="@drawable/platzi_conf_2"
+                        android:scaleType="centerCrop"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    android:elevation="@dimen/cardElevation"
+                    android:layout_margin="@dimen/cardMargin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvDetailHour"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/bigTitleSize"
+                            android:textStyle="bold"
+                            android:text="Lugar PlatziConf"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="center"
+                            android:layout_margin="@dimen/marginText"/>
+                        <TextView
+                            android:id="@+id/tvDetailConferenceSpeaker"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/subtitleSize"
+                            android:text="Location"
+                            android:textColor="@color/colorPrimary"
+                            android:drawableStart="@drawable/ic_baseline_location"
+                            android:drawablePadding="5dp"
+                            android:layout_margin="@dimen/marginText"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimary"/>
+                        <TextView
+                            android:id="@+id/tvDetailConferenceTag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/subtitleSize"
+                            android:text="Telefono"
+                            android:textColor="@color/colorPrimary"
+                            android:drawableStart="@drawable/ic_baseline_phone"
+                            android:drawablePadding="5dp"
+                            android:layout_margin="@dimen/marginText"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimary"/>
+                        <TextView
+                            android:id="@+id/tvDetailConferenceDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/subtitleSize"
+                            android:text="Sitio web"
+                            android:textColor="@color/colorPrimary"
+                            android:drawableStart="@drawable/ic_baseline_link"
+                            android:drawablePadding="5dp"
+                            android:layout_margin="@dimen/marginText"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

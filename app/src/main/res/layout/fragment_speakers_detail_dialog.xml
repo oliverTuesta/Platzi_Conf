@@ -1,91 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.SpeakersDetailDialogFragment">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Toolbar
-            android:id="@+id/tbConference"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/ivSpeakerPicture"
-                android:layout_width="@dimen/heightImageViewHome"
-                android:layout_height="@dimen/heightImageViewHome"
-                android:src="@drawable/ic_person"
-                android:layout_centerHorizontal="true"
-                android:alpha="100"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Toolbar
+                    android:id="@+id/tbConference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.appbar.AppBarLayout>
+
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ivSpeakerPicture"
-                app:cardCornerRadius="@dimen/cardCornerRadius"
+                android:layout_margin="10dp"
                 android:elevation="@dimen/cardElevation"
-                android:layout_margin="10dp">
+                app:cardCornerRadius="@dimen/cardCornerRadius">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                <TextView
-                    android:id="@+id/tvSpeakerDetai"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="speaker name"
-                    android:textStyle="bold"
-                    android:textSize="25sp"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"/>
-                <TextView
-                    android:layout_margin="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="job title"
-                    android:textSize="@dimen/subtitleSize"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimaryDark"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_margin="@dimen/cardMargin"
+                        android:layout_width="@dimen/heightImageViewHome"
+                        android:layout_height="@dimen/heightImageViewHome"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_launcher_round"
+                        app:civ_border_color="@color/colorPrimary"
+                        app:civ_border_width="2dp" />
+
+                    <TextView
+                        android:id="@+id/tvSpeakerDetai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Speaker Name"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/bigTitleSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:text="job title"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/subtitleSize" />
+
                     <TextView
                         android:id="@+id/tvSpeakerDetailJob"
-                        android:layout_marginBottom="@dimen/marginText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="trabajo"
-                        android:textSize="@dimen/titleSize"
+                        android:layout_marginBottom="@dimen/marginText"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimaryDark" />
+                        android:text="Workplace"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/titleSize"
+                        android:textStyle="bold"/>
+
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/twitterimg"
-                        android:layout_gravity="center"/>
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_twitter_logo_blue" />
+
                     <TextView
                         android:id="@+id/tvSpeakerDetaiBiography"
-                        android:layout_margin="@dimen/marginText"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="21dp"
+                        android:layout_margin="@dimen/marginText"
                         android:text="biography"
-                        android:textSize="@dimen/subtitleSize"
-                        android:gravity="center"
-                        android:textColor="@color/colorPrimaryDark"/>
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/subtitleSize" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </FrameLayout>
 
