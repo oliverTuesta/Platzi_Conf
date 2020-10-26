@@ -91,7 +91,7 @@
                         android:layout_margin="@dimen/marginText"
                         android:text="biography"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="@dimen/subtitleSize" />
+                        android:textSize="@dimen/subtitleSize"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
