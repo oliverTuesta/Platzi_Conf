@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navHomeFreagment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/navHomeFreagment"
+        android:name="com.example.platziconf.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_schuduleFragment"
+            app:destination="@id/navScheduleFreagment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navScheduleFreagment"
+        android:name="com.example.platziconf.ui.fragments.SchuduleFragment"
+        android:label="fragment_schudule"
+        tools:layout="@layout/fragment_schudule" >
+        <action
+            android:id="@+id/action_schuduleFragment_to_speakersFragment"
+            app:destination="@id/navSpeakersFreagment" />
+        <action
+            android:id="@+id/action_navScheduleFreagment_to_scheduleDetailDialog"
+            app:destination="@id/scheduleDetailDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/navSpeakersFreagment"
+        android:name="com.example.platziconf.ui.fragments.SpeakersFragment"
+        android:label="fragment_speakers"
+        tools:layout="@layout/fragment_speakers" >
+        <action
+            android:id="@+id/action_speakersFragment_to_ubicationFragment"
+            app:destination="@id/navMapFreagment" />
+        <action
+            android:id="@+id/action_navSpeakersFreagment_to_speakersDetailFragmentDialog"
+            app:destination="@id/speakersDetailFragmentDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/navMapFreagment"
+        android:name="com.example.platziconf.ui.fragments.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" >
+        <action
+            android:id="@+id/action_navMapFreagment_to_locationDetailDialog"
+            app:destination="@id/locationDetailDialog" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/speakersDetailFragmentDialog"
+        android:name="com.example.platziconf.ui.fragments.SpeakersDetailDialogFragment"
+        android:label="SpeakerDetailFragmentDialog"
+        tools:layout="@layout/fragment_speakers_detail_dialog"/>
+
+    <dialog
+        android:id="@+id/scheduleDetailDialog"
+        android:name="com.example.platziconf.ui.fragments.SpeakersDetailDialogFragment"
+        android:label="ScheduleDetailFragmentDialog"
+        tools:layout="@layout/fragment_schedule_detail"/>
+
+    <dialog
+        android:id="@+id/locationDetailDialog"
+        android:name="com.example.platziconf.ui.fragments.LocationDetailDialogFragment"
+        android:label="LocationDetailFragmentDialog"
+        tools:layout="@layout/fragment_location_detail_dialog"/>
+
+</navigation>

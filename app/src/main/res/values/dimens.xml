@@ -4,7 +4,7 @@
     <dimen name="toolBarAlto">30dp</dimen>
     <dimen name="heightImageViewHome">150dp</dimen>
     <dimen name="marginText">10dp</dimen>
-    <dimen name="cardCornerRadius">5dp</dimen>
+    <dimen name="cardCornerRadius">6dp</dimen>
     <dimen name="cardElevation">4dp</dimen>
     <dimen name="cardMargin">15dp</dimen>
 

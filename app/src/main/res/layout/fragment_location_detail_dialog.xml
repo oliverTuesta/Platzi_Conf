@@ -32,7 +32,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="@drawable/shape_parrafo">
                         <TextView
                             android:id="@+id/tvDetailHour"
                             android:layout_width="match_parent"
@@ -50,9 +51,9 @@
                             android:textSize="@dimen/subtitleSize"
                             android:text="Location"
                             android:textColor="@color/colorPrimary"
-                            android:drawableStart="@drawable/ic_baseline_location"
                             android:drawablePadding="5dp"
-                            android:layout_margin="@dimen/marginText"/>
+                            android:layout_margin="@dimen/marginText"
+                            app:drawableStartCompat="@drawable/ic_baseline_location" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -64,9 +65,9 @@
                             android:textSize="@dimen/subtitleSize"
                             android:text="Telefono"
                             android:textColor="@color/colorPrimary"
-                            android:drawableStart="@drawable/ic_baseline_phone"
                             android:drawablePadding="5dp"
-                            android:layout_margin="@dimen/marginText"/>
+                            android:layout_margin="@dimen/marginText"
+                            app:drawableStartCompat="@drawable/ic_baseline_phone" />
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -78,9 +79,9 @@
                             android:textSize="@dimen/subtitleSize"
                             android:text="Sitio web"
                             android:textColor="@color/colorPrimary"
-                            android:drawableStart="@drawable/ic_baseline_link"
                             android:drawablePadding="5dp"
-                            android:layout_margin="@dimen/marginText"/>
+                            android:layout_margin="@dimen/marginText"
+                            app:drawableStartCompat="@drawable/ic_baseline_link" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
