@@ -25,7 +25,7 @@
             app:destination="@id/navSpeakersFreagment" />
         <action
             android:id="@+id/action_navScheduleFreagment_to_scheduleDetailDialog"
-            app:destination="@id/scheduleDetailDialog" />
+            app:destination="@id/scheduleDetailFragmentDialog" />
     </fragment>
     <fragment
         android:id="@+id/navSpeakersFreagment"
@@ -46,7 +46,7 @@
         tools:layout="@layout/fragment_location" >
         <action
             android:id="@+id/action_navMapFreagment_to_locationDetailDialog"
-            app:destination="@id/locationDetailDialog" />
+            app:destination="@id/locationDetailFragmentDialog" />
     </fragment>
 
     <dialog
@@ -56,13 +56,13 @@
         tools:layout="@layout/fragment_speakers_detail_dialog"/>
 
     <dialog
-        android:id="@+id/scheduleDetailDialog"
+        android:id="@+id/scheduleDetailFragmentDialog"
         android:name="com.example.platziconf.ui.fragments.SpeakersDetailDialogFragment"
         android:label="ScheduleDetailFragmentDialog"
         tools:layout="@layout/fragment_schedule_detail"/>
 
     <dialog
-        android:id="@+id/locationDetailDialog"
+        android:id="@+id/locationDetailFragmentDialog"
         android:name="com.example.platziconf.ui.fragments.LocationDetailDialogFragment"
         android:label="LocationDetailFragmentDialog"
         tools:layout="@layout/fragment_location_detail_dialog"/>
