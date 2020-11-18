@@ -3,10 +3,10 @@ package com.example.platziconf.model
 class Speaker{
 
     var name = ""
-    var jobTitle = ""
-    var workPlace = ""
+    var jobtitle = ""
+    var workplace = ""
     var biography = ""
     var twitter = ""
-    var picture = ""
-
+    var image = ""
+    var category = 0
 }
