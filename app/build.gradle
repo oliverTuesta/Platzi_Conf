@@ -46,7 +46,7 @@ dependencies {
     //imagen redondeada
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-    //firebas
+    //Firebase
     implementation platform('com.google.firebase:firebase-bom:26.0.0')
     implementation 'com.google.firebase:firebase-firestore:22.0.0'
 
