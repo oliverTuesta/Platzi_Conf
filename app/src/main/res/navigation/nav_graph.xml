@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/navHomeFreagment"
-        android:name="com.example.platziconf.ui.fragments.HomeFragment"
+        android:name="com.example.platziconf.view.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/navScheduleFreagment"
-        android:name="com.example.platziconf.ui.fragments.SchuduleFragment"
+        android:name="com.example.platziconf.view.ui.fragments.SchuduleFragment"
         android:label="fragment_schudule"
         tools:layout="@layout/fragment_schudule" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/navSpeakersFreagment"
-        android:name="com.example.platziconf.ui.fragments.SpeakersFragment"
+        android:name="com.example.platziconf.view.ui.fragments.SpeakersFragment"
         android:label="fragment_speakers"
         tools:layout="@layout/fragment_speakers" >
         <action
@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/navMapFreagment"
-        android:name="com.example.platziconf.ui.fragments.LocationFragment"
+        android:name="com.example.platziconf.view.ui.fragments.LocationFragment"
         android:label="fragment_location"
         tools:layout="@layout/fragment_location" >
         <action
@@ -51,19 +51,19 @@
 
     <dialog
         android:id="@+id/speakersDetailFragmentDialog"
-        android:name="com.example.platziconf.ui.fragments.SpeakersDetailDialogFragment"
+        android:name="com.example.platziconf.view.ui.fragments.SpeakersDetailDialogFragment"
         android:label="SpeakerDetailFragmentDialog"
         tools:layout="@layout/fragment_speakers_detail_dialog"/>
 
     <dialog
         android:id="@+id/scheduleDetailFragmentDialog"
-        android:name="com.example.platziconf.ui.fragments.SpeakersDetailDialogFragment"
+        android:name="com.example.platziconf.view.ui.fragments.SpeakersDetailDialogFragment"
         android:label="ScheduleDetailFragmentDialog"
         tools:layout="@layout/fragment_schedule_detail"/>
 
     <dialog
         android:id="@+id/locationDetailFragmentDialog"
-        android:name="com.example.platziconf.ui.fragments.LocationDetailDialogFragment"
+        android:name="com.example.platziconf.view.ui.fragments.LocationDetailDialogFragment"
         android:label="LocationDetailFragmentDialog"
         tools:layout="@layout/fragment_location_detail_dialog"/>
 
