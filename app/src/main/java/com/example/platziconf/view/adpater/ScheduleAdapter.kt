@@ -35,6 +35,11 @@ class ScheduleAdapter(val scheduleListener: ScheduleListener) :
 
         holder.tvConferenceHour.text = hourFormat
         holder.tvConferenceAMPM.text = amPm.toUpperCase()
+
+        holder.itemView.setOnClickListener {
+            scheduleListener.onConferenceClicked(conference, position)
+        }
+
     }
 
     fun updateData(data: List<Conference>) {
