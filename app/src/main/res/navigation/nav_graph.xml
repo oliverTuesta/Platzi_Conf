@@ -19,7 +19,7 @@
         android:id="@+id/navScheduleFreagment"
         android:name="com.example.platziconf.view.ui.fragments.SchuduleFragment"
         android:label="fragment_schudule"
-        tools:layout="@layout/fragment_schudule" >
+        tools:layout="@layout/fragment_schedule" >
         <action
             android:id="@+id/action_schuduleFragment_to_speakersFragment"
             app:destination="@id/navSpeakersFreagment" />
