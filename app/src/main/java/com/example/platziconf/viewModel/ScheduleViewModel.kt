@@ -1,4 +1,4 @@
-package com.example.platziconf.viewModel
+package com.platzi.conf.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -6,8 +6,8 @@ import com.example.platziconf.model.Conference
 import com.example.platziconf.network.Callback
 import com.example.platziconf.network.FirestoreService
 
-class ScheduleViewModel : ViewModel() {
-    private val firestoreService = FirestoreService()
+class ScheduleViewModel: ViewModel() {
+    val firestoreService = FirestoreService()
     var listSchedule: MutableLiveData<List<Conference>> = MutableLiveData()
     var isLoading = MutableLiveData<Boolean>()
 
@@ -15,8 +15,8 @@ class ScheduleViewModel : ViewModel() {
         getScheduleFromFirebase()
     }
 
-    private fun getScheduleFromFirebase() {
-        firestoreService.getShedule(object : Callback<List<Conference>> {
+    fun getScheduleFromFirebase() {
+        firestoreService.getSchedule(object: Callback<List<Conference>> {
             override fun onSuccess(result: List<Conference>?) {
                 listSchedule.postValue(result)
                 processFinished()
@@ -28,9 +28,7 @@ class ScheduleViewModel : ViewModel() {
         })
     }
 
-    private fun processFinished() {
+    fun processFinished() {
         isLoading.value = true
     }
-
-
 }

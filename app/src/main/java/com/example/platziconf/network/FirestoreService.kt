@@ -9,6 +9,7 @@ const val CONFERENCES_COLLECTION_NAME = "conferences"
 const val SPEAKERS_COLLECTION_NAME = "speakers"
 
 class FirestoreService {
+
     private val firebaseFirestore = FirebaseFirestore.getInstance()
     //permitir datos offline
     private val settings = FirebaseFirestoreSettings.Builder().setPersistenceEnabled(true).build()
@@ -29,7 +30,7 @@ class FirestoreService {
                 }
             }
     }
-    fun getShedule(callback: Callback<List<Conference>>) {
+    fun getSchedule(callback: Callback<List<Conference>>) {
         firebaseFirestore.collection(CONFERENCES_COLLECTION_NAME)
             .get().addOnSuccessListener { result ->
                 for (doc in result){

@@ -12,10 +12,10 @@ class SpeakersViewModel: ViewModel() {
     var isLoading = MutableLiveData<Boolean>()
 
     fun refresh() {
-        getSpeakerFromFirebase()
+        getSpeakersFromFirebase()
     }
 
-    private fun getSpeakerFromFirebase() {
+    private fun getSpeakersFromFirebase() {
         firestoreService.getSpeakers(object : Callback<List<Speaker>> {
             override fun onSuccess(result: List<Speaker>?) {
                 listSpeaker.postValue(result)
