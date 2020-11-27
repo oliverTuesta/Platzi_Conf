@@ -18,17 +18,12 @@ import com.example.platziconf.viewModel.ScheduleViewModel
 import kotlinx.android.synthetic.main.fragment_schedule.*
 
 
-class SchuduleFragment : Fragment(), ScheduleListener {
+class ScheduleFragment : Fragment(), ScheduleListener {
 
     private lateinit var scheduleAdapter: ScheduleAdapter
     private lateinit var viewModel: ScheduleViewModel
 
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_schedule, container, false)
     }
 
@@ -45,20 +40,17 @@ class SchuduleFragment : Fragment(), ScheduleListener {
             adapter = scheduleAdapter
         }
         observeViewModel()
-
     }
 
-    private fun observeViewModel() {
-        viewModel.listSchedule.observe(viewLifecycleOwner, Observer<List<Conference>> { schedele ->
-            scheduleAdapter.updateData(schedele)
+    fun observeViewModel() {
+        viewModel.listSchedule.observe(viewLifecycleOwner, Observer<List<Conference>> { schedule ->
+            scheduleAdapter.updateData(schedule)
         })
 
         viewModel.isLoading.observe(viewLifecycleOwner, Observer<Boolean> {
-            if (it != null) {
+            if (it != null)
                 rlBaseSchedule.visibility = View.INVISIBLE
-            }
         })
-
     }
 
     override fun onConferenceClicked(conference: Conference, position: Int) {

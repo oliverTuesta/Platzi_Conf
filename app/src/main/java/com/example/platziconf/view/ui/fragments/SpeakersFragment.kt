@@ -27,7 +27,7 @@ class SpeakersFragment : Fragment(), SpeakerListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_schedule, container, false)
+        return inflater.inflate(R.layout.fragment_speakers, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -45,20 +45,18 @@ class SpeakersFragment : Fragment(), SpeakerListener {
         }
         observeViewModel()
 
-
     }
 
-    private fun observeViewModel() {
-        viewModel.listSpeakers.observe(this, Observer <List<Speaker>> {speaker ->
+    fun observeViewModel(){
+        viewModel.listSpeaker.observe(viewLifecycleOwner, Observer<List<Speaker>> { speaker ->
             speakerAdapter.updateData(speaker)
         })
 
-        viewModel.isLoading.observe(this, Observer<Boolean>{
+        viewModel.isLoading.observe(viewLifecycleOwner, Observer<Boolean> {
             if (it != null){
                 rlBaseSpeaker.visibility = View.INVISIBLE
             }
         })
-
     }
 
     override fun onSpeakerClicked(speaker: Speaker, position: Int) {

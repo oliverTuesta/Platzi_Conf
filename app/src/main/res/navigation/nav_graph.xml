@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/navHomeFreagment"
-    tools:ignore="UnusedNavigation">
+    app:startDestination="@id/navHomeFreagment">
 
     <fragment
         android:id="@+id/navHomeFreagment"
@@ -12,19 +11,19 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_schuduleFragment"
+            android:id="@+id/action_homeFragment_to_scheduleFragment"
             app:destination="@id/navScheduleFreagment" />
     </fragment>
     <fragment
         android:id="@+id/navScheduleFreagment"
-        android:name="com.example.platziconf.view.ui.fragments.SchuduleFragment"
-        android:label="fragment_schudule"
+        android:name="com.example.platziconf.view.ui.fragments.ScheduleFragment"
+        android:label="fragment_schedule"
         tools:layout="@layout/fragment_schedule" >
         <action
-            android:id="@+id/action_schuduleFragment_to_speakersFragment"
+            android:id="@+id/action_scheduleFragment_to_speakersFragment"
             app:destination="@id/navSpeakersFreagment" />
         <action
-            android:id="@+id/action_navScheduleFreagment_to_scheduleDetailDialog"
+            android:id="@+id/action_navScheduleFragment_to_scheduleDetailFragmentDialog"
             app:destination="@id/scheduleDetailFragmentDialog" />
     </fragment>
     <fragment
@@ -33,38 +32,37 @@
         android:label="fragment_speakers"
         tools:layout="@layout/fragment_speakers" >
         <action
-            android:id="@+id/action_speakersFragment_to_ubicationFragment"
+            android:id="@+id/action_speakersFragment_to_locationFragment"
             app:destination="@id/navMapFreagment" />
         <action
-            android:id="@+id/action_navSpeakersFreagment_to_speakersDetailFragmentDialog"
+            android:id="@+id/action_navSpeakersFragment_to_speakersDetailFragmentDialog"
             app:destination="@id/speakersDetailFragmentDialog" />
     </fragment>
     <fragment
         android:id="@+id/navMapFreagment"
         android:name="com.example.platziconf.view.ui.fragments.LocationFragment"
-        android:label="fragment_location"
+        android:label="fragment_ubication"
         tools:layout="@layout/fragment_location" >
         <action
-            android:id="@+id/action_navMapFreagment_to_locationDetailDialog"
-            app:destination="@id/locationDetailFragmentDialog" />
+            android:id="@+id/action_navMapFragment_to_mapsDetailFragmentDialog"
+            app:destination="@id/ubicationDetailFragmentDialog" />
     </fragment>
 
     <dialog
         android:id="@+id/speakersDetailFragmentDialog"
-        android:name="com.example.platziconf.view.ui.fragments.SpeakersDetailDialogFragment"
+        android:name="com.example.platziconf.view.ui.fragments.ScheduleDetailFragment"
         android:label="SpeakerDetailFragmentDialog"
-        tools:layout="@layout/fragment_speakers_detail_dialog"/>
-
-    <dialog
-        android:id="@+id/scheduleDetailFragmentDialog"
-        android:name="com.example.platziconf.view.ui.fragments.SpeakersDetailDialogFragment"
-        android:label="ScheduleDetailFragmentDialog"
         tools:layout="@layout/fragment_schedule_detail"/>
 
     <dialog
-        android:id="@+id/locationDetailFragmentDialog"
+        android:id="@+id/scheduleDetailFragmentDialog"
+        android:name="com.example.platziconf.view.ui.fragments.LocationFragment"
+        android:label="ScheduleDetailFragmentDialog"
+        tools:layout="@layout/fragment_speakers_detail_dialog"/>
+    <dialog
+        android:id="@+id/ubicationDetailFragmentDialog"
         android:name="com.example.platziconf.view.ui.fragments.LocationDetailDialogFragment"
-        android:label="LocationDetailFragmentDialog"
-        tools:layout="@layout/fragment_location_detail_dialog"/>
+        android:label="fragment_maps_detail_dialog"
+        tools:layout="@layout/fragment_location_detail_dialog" />
 
 </navigation>

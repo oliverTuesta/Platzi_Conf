@@ -7,8 +7,8 @@ import com.example.platziconf.network.Callback
 import com.example.platziconf.network.FirestoreService
 
 class SpeakersViewModel: ViewModel() {
-    val firestoreService = FirestoreService()
-    var listSpeakers: MutableLiveData<List<Speaker>> = MutableLiveData()
+    private val firestoreService = FirestoreService()
+    var listSpeaker: MutableLiveData<List<Speaker>> = MutableLiveData()
     var isLoading = MutableLiveData<Boolean>()
 
     fun refresh() {
@@ -18,7 +18,7 @@ class SpeakersViewModel: ViewModel() {
     private fun getSpeakerFromFirebase() {
         firestoreService.getSpeakers(object : Callback<List<Speaker>> {
             override fun onSuccess(result: List<Speaker>?) {
-                listSpeakers.postValue(result)
+                listSpeaker.postValue(result)
                 processFinished()
             }
             override fun onFailed(exception: Exception) {

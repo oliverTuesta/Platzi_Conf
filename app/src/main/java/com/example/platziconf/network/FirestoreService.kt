@@ -5,13 +5,13 @@ import com.example.platziconf.model.Speaker
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 
-const val CONFERENCES_COLLECTION_NAME = "conference"
+const val CONFERENCES_COLLECTION_NAME = "conferences"
 const val SPEAKERS_COLLECTION_NAME = "speakers"
 
 class FirestoreService {
-    val firebaseFirestore = FirebaseFirestore.getInstance()
+    private val firebaseFirestore = FirebaseFirestore.getInstance()
     //permitir datos offline
-    val settings = FirebaseFirestoreSettings.Builder().setPersistenceEnabled(true).build()
+    private val settings = FirebaseFirestoreSettings.Builder().setPersistenceEnabled(true).build()
 
     //habilitar los datos offline
     init {

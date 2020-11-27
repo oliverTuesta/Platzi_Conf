@@ -6,8 +6,8 @@ import com.example.platziconf.model.Conference
 import com.example.platziconf.network.Callback
 import com.example.platziconf.network.FirestoreService
 
-class ScheduleViewModel(): ViewModel() {
-    val firestoreService = FirestoreService()
+class ScheduleViewModel : ViewModel() {
+    private val firestoreService = FirestoreService()
     var listSchedule: MutableLiveData<List<Conference>> = MutableLiveData()
     var isLoading = MutableLiveData<Boolean>()
 
