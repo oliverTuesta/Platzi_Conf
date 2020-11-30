@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.platziconf.R
 import com.example.platziconf.model.Speaker
 import com.example.platziconf.view.adpater.SpeakerAdapter
@@ -17,7 +17,7 @@ import com.example.platziconf.view.adpater.SpeakerListener
 import com.example.platziconf.viewModel.SpeakersViewModel
 import kotlinx.android.synthetic.main.fragment_speakers.*
 
-class SpeakersFragment : Fragment(), SpeakerListener {
+class SpeakerFragment : Fragment(), SpeakerListener {
 
     private lateinit var speakerAdapter: SpeakerAdapter
     private lateinit var viewModel: SpeakersViewModel
@@ -39,7 +39,7 @@ class SpeakersFragment : Fragment(), SpeakerListener {
         speakerAdapter = SpeakerAdapter(this)
 
         rvSpeaker.apply {
-            layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, false)
+            layoutManager = GridLayoutManager(view.context, 2)
             adapter = speakerAdapter
 
         }

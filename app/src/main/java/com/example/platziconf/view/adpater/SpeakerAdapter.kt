@@ -26,11 +26,10 @@ class SpeakerAdapter(val speakerListener: SpeakerListener) :
         holder.speakerName.text = speaker.name
         holder.speakerJob.text = speaker.jobtitle
 
-        Glide.with(holder.itemView.context)
-            .load(speaker.image)
-            .apply(RequestOptions.circleCropTransform())
-            .into(holder.speakerImage)
-
+            Glide.with(holder.itemView.context)
+                .load(speaker.image)
+                .apply(RequestOptions.circleCropTransform())
+                .into(holder.speakerImage)
         holder.itemView.setOnClickListener {
             speakerListener.onSpeakerClicked(speaker, position)
         }

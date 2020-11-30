@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/navSpeakersFreagment"
-        android:name="com.example.platziconf.view.ui.fragments.SpeakersFragment"
+        android:name="com.example.platziconf.view.ui.fragments.SpeakerFragment"
         android:label="fragment_speakers"
         tools:layout="@layout/fragment_speakers" >
         <action
@@ -56,7 +56,7 @@
 
     <dialog
         android:id="@+id/scheduleDetailFragmentDialog"
-        android:name="com.example.platziconf.view.ui.fragments.LocationFragment"
+        android:name="com.example.platziconf.view.ui.fragments.ScheduleDetailFragment"
         android:label="ScheduleDetailFragmentDialog"
         tools:layout="@layout/fragment_speakers_detail_dialog"/>
     <dialog

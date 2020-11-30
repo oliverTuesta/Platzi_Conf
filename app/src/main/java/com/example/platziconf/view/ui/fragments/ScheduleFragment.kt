@@ -14,7 +14,7 @@ import com.example.platziconf.R
 import com.example.platziconf.model.Conference
 import com.example.platziconf.view.adpater.ScheduleAdapter
 import com.example.platziconf.view.adpater.ScheduleListener
-import com.example.platziconf.viewModel.ScheduleViewModel
+import com.platzi.conf.viewmodel.ScheduleViewModel
 import kotlinx.android.synthetic.main.fragment_schedule.*
 
 

@@ -2,7 +2,9 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -17,7 +19,8 @@
         android:layout_height="match_parent">
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -26,7 +29,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="200dp">
+                    android:layout_height="250dp">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -42,7 +45,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="30sp"
-                        android:text="Titulo de la conferencia"
+                        tools:text="Conference title"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"
                         android:gravity="center"
@@ -66,7 +69,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/subtitleSize"
-                        android:text="00:00"
+                        android:text="@string/timeStart"
                         android:textColor="@color/colorPrimary"
                         android:gravity="center"
                         android:layout_margin="@dimen/marginText"/>
@@ -75,7 +78,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/titleSize"
-                        android:text="NOMBRE EXPOSITOR"
+                        tools:text="SPEAKER NAME"
                         android:textColor="@color/colorPrimary"
                         android:gravity="center"
                         android:textStyle="bold" />
@@ -84,7 +87,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/subtitleSize"
-                        android:text="Tag"
+                        tools:text="Tag"
                         android:textColor="@color/colorPrimary"
                         android:gravity="center"
                         android:layout_margin="@dimen/marginText"/>
@@ -93,9 +96,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/subtitleSize"
-                            android:text="Detaslle de la conferencia"
+                            tools:text="Conference Detail"
                             android:textColor="@color/colorPrimary"
                             android:gravity="center"
+                            android:layout_marginStart="@dimen/marginText"
+                            android:layout_marginEnd="@dimen/marginText"
                             android:layout_marginBottom="@dimen/marginText"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

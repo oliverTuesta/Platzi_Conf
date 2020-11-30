@@ -21,7 +21,7 @@ class ScheduleAdapter(val scheduleListener: ScheduleListener) :
     }
 
     override fun onBindViewHolder(holder: ScheduleAdapter.ViewHolder, position: Int) {
-        val conference = listConference[position]
+        val conference = listConference[position] as Conference
 
         holder.tvConferenceName.text = conference.title
         holder.tvConferenceSpeaker.text = conference.speaker
@@ -30,11 +30,14 @@ class ScheduleAdapter(val scheduleListener: ScheduleListener) :
         val simpleDateformat = SimpleDateFormat("HH:mm")
         val simpleDateformatAMPM = SimpleDateFormat("a")
 
-        val hourFormat = simpleDateformat.format(conference.datetime)
-        val amPm = simpleDateformatAMPM.format(conference.datetime)
+        try {
+            val hourFormat = simpleDateformat.format(conference.datetime)
 
-        holder.tvConferenceHour.text = hourFormat
-        holder.tvConferenceAMPM.text = amPm.toUpperCase()
+            holder.tvConferenceHour.text = hourFormat
+            holder.tvConferenceAMPM.text = simpleDateformatAMPM.format(conference.datetime).toUpperCase()
+        }catch (e: Exception){
+            //println("error ${e}")
+        }
 
         holder.itemView.setOnClickListener {
             scheduleListener.onConferenceClicked(conference, position)

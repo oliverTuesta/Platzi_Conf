@@ -1,6 +1,5 @@
 package com.example.platziconf.view.ui.fragments
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -31,27 +30,33 @@ class ScheduleDetailFragment : DialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         tbConference.navigationIcon = ContextCompat.getDrawable(view.context, R.drawable.ic_close)
-        tbConference.setTitleTextColor(Color.WHITE)
         tbConference.setNavigationOnClickListener {
             dismiss()
         }
 
         val conference = arguments?.getSerializable("conference") as Conference
-        tbConference.title = conference.title
 
-        tvDetailConferenceTitle.text = conference.title
-        val pattern = "dd/MM/yyyy hh:mm a"
-        val simpleDF = SimpleDateFormat(pattern)
-        val date = simpleDF.format(conference.datetime)
-        tvDetailHour.text = date
-        tvDetailConferenceSpeaker.text = conference.speaker
+
+        try {
+            tvDetailConferenceTitle.text = conference.title
+            val pattern = "dd/MM/yyyy hh:mm a"
+            val simpleDF = SimpleDateFormat(pattern)
+            val date = simpleDF.format(conference.datetime)
+            tvDetailHour.text = date
+        } catch (e: Exception) {
+            println("error en la hora de scheduleDetail: $e")
+        }
+        tvDetailConferenceSpeaker.text = conference.speaker.toUpperCase()
         tvDetailConferenceTag.text = conference.tag
         tvDetailConferenceDescription.text = conference.description
     }
 
     override fun onStart() {
         super.onStart()
-        dialog?.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+        dialog?.window?.setLayout(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT
+        )
     }
 
 }
