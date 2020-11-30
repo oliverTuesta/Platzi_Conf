@@ -20,16 +20,19 @@
                 android:layout_height="wrap_content">
 
                 <Toolbar
-                    android:id="@+id/tbConference"
+                    android:id="@+id/tbSpeaker"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.appbar.AppBarLayout>
 
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/cardMargin"
                 android:elevation="@dimen/cardElevation"
                 app:cardCornerRadius="@dimen/cardCornerRadius">
 
@@ -39,7 +42,7 @@
                     android:orientation="vertical">
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/profile_image"
+                        android:id="@+id/ivSpeakerDetailPicture"
                         android:layout_margin="@dimen/cardMargin"
                         android:layout_width="@dimen/heightImageViewHome"
                         android:layout_height="@dimen/heightImageViewHome"
@@ -49,31 +52,32 @@
                         app:civ_border_width="2dp" />
 
                     <TextView
-                        android:id="@+id/tvSpeakerDetai"
+                        android:id="@+id/tvSpeakerDetailName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Speaker Name"
+                        tools:text="Speaker Name"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/bigTitleSize"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tvSpeakerDetailJobTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:gravity="center"
-                        android:text="job title"
+                        tools:text="job title"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/subtitleSize" />
 
                     <TextView
-                        android:id="@+id/tvSpeakerDetailJob"
+                        android:id="@+id/tvSpeakerDetailWorkplace"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/marginText"
                         android:gravity="center"
-                        android:text="Workplace"
+                        tools:text="Workplace"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/titleSize"
                         android:textStyle="bold"/>
@@ -85,15 +89,19 @@
                         android:src="@drawable/ic_twitter_logo_blue" />
 
                     <TextView
-                        android:id="@+id/tvSpeakerDetaiBiography"
+                        android:id="@+id/tvSpeakerDetailBiography"
                         android:layout_width="match_parent"
-                        android:layout_height="21dp"
-                        android:layout_margin="@dimen/marginText"
-                        android:text="biography"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/marginText"
+                        android:layout_marginEnd="@dimen/marginText"
+                        android:layout_marginTop="@dimen/marginText"
+                        android:layout_marginBottom="30dp"
+                        tools:text="biography"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/subtitleSize"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+            </ScrollView>
 
         </LinearLayout>
 
