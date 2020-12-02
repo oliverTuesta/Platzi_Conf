@@ -43,6 +43,7 @@ class SpeakersDetailDialogFragment : DialogFragment() {
             .apply(RequestOptions.circleCropTransform())
             .into(ivSpeakerDetailPicture)
 
+        tvSpeakerDetailWorkplace.text = speaker.workplace
         tvSpeakerDetailName.text = speaker.name
         tvSpeakerDetailJobTitle.text = speaker.jobtitle
         tvSpeakerDetailBiography.text = speaker.biography

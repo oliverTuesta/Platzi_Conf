@@ -45,7 +45,7 @@
         tools:layout="@layout/fragment_location" >
         <action
             android:id="@+id/action_navMapFragment_to_mapsDetailFragmentDialog"
-            app:destination="@id/ubicationDetailFragmentDialog" />
+            app:destination="@id/locationDetailFragmentDialog" />
     </fragment>
 
     <dialog
@@ -60,7 +60,7 @@
         android:label="ScheduleDetailFragmentDialog"
         tools:layout="@layout/fragment_speakers_detail_dialog"/>
     <dialog
-        android:id="@+id/ubicationDetailFragmentDialog"
+        android:id="@+id/locationDetailFragmentDialog"
         android:name="com.example.platziconf.view.ui.fragments.LocationDetailDialogFragment"
         android:label="fragment_maps_detail_dialog"
         tools:layout="@layout/fragment_location_detail_dialog" />

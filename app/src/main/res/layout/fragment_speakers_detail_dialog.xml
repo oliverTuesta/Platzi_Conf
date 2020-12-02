@@ -27,7 +27,8 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"

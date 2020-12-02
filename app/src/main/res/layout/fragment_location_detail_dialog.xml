@@ -2,6 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -17,9 +18,10 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                     <ImageView
+                        android:id="@+id/ivLocationImage"
                         android:layout_width="match_parent"
-                        android:layout_height="230dp"
-                        android:src="@drawable/platzi_conf_2"
+                        android:layout_height="300dp"
+                        tools:src="@drawable/platzi_conf_2"
                         android:scaleType="centerCrop"/>
 
                 <androidx.cardview.widget.CardView
@@ -32,56 +34,62 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@drawable/shape_parrafo">
+                        android:background="@drawable/shape_parrafo"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:id="@+id/tvDetailHour"
+                            android:id="@+id/tvLocationName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/marginText"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="@dimen/bigTitleSize"
                             android:textStyle="bold"
-                            android:text="Lugar PlatziConf"
-                            android:textColor="@color/colorPrimary"
-                            android:gravity="center"
-                            android:layout_margin="@dimen/marginText"/>
+                            tools:text="Lugar PlatziConf" />
+
                         <TextView
-                            android:id="@+id/tvDetailConferenceSpeaker"
+                            android:id="@+id/tvLocationAddress"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/subtitleSize"
-                            android:text="Location"
-                            android:textColor="@color/colorPrimary"
-                            android:drawablePadding="5dp"
                             android:layout_margin="@dimen/marginText"
-                            app:drawableStartCompat="@drawable/ic_baseline_location" />
+                            android:drawablePadding="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/subtitleSize"
+                            app:drawableStartCompat="@drawable/ic_baseline_location"
+                            tools:text="Location" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/colorPrimary"/>
+                            android:background="@color/colorPrimary" />
+
                         <TextView
-                            android:id="@+id/tvDetailConferenceTag"
+                            android:id="@+id/tvLocationTelephone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/subtitleSize"
-                            android:text="Telefono"
-                            android:textColor="@color/colorPrimary"
-                            android:drawablePadding="5dp"
                             android:layout_margin="@dimen/marginText"
-                            app:drawableStartCompat="@drawable/ic_baseline_phone" />
+                            android:drawablePadding="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/subtitleSize"
+                            app:drawableStartCompat="@drawable/ic_baseline_phone"
+                            tools:text="Telephone" />
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/colorPrimary"/>
+                            android:background="@color/colorPrimary" />
+
                         <TextView
-                            android:id="@+id/tvDetailConferenceDescription"
+                            android:id="@+id/tvLocationWebSite"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/subtitleSize"
-                            android:text="Sitio web"
-                            android:textColor="@color/colorPrimary"
-                            android:drawablePadding="5dp"
                             android:layout_margin="@dimen/marginText"
-                            app:drawableStartCompat="@drawable/ic_baseline_link" />
+                            android:drawablePadding="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/subtitleSize"
+                            app:drawableStartCompat="@drawable/ic_baseline_link"
+                            tools:text="Web site" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
