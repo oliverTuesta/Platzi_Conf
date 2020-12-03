@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import com.example.platziconf.R
 import com.example.platziconf.model.Speaker
 import kotlinx.android.synthetic.main.fragment_speakers_detail_dialog.*
@@ -40,7 +39,6 @@ class SpeakersDetailDialogFragment : DialogFragment() {
 
         Glide.with(this)
             .load(speaker.image)
-            .apply(RequestOptions.circleCropTransform())
             .into(ivSpeakerDetailPicture)
 
         tvSpeakerDetailWorkplace.text = speaker.workplace

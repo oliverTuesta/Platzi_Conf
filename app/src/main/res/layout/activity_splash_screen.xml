@@ -8,7 +8,7 @@
     android:background="@color/colorPrimaryDark">
 
     <ImageView
-        android:id="@+id/ivLogo"
+        android:id="@+id/ivLogoPlatzi"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/altoLogo"
         android:src="@drawable/logo_platzi_conf"

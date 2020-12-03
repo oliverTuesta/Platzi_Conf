@@ -27,6 +27,7 @@
                     android:orientation="vertical"
                     android:background="@drawable/shape_parrafo">
                     <ImageView
+                        android:layout_marginTop="1dp"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/heightImageViewHome"
                         android:src="@drawable/banner_platzi_conf"/>

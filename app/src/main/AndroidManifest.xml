@@ -14,14 +14,14 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC3r1j7w9s-IDQOuRUyG1hgB3VV1a7_-l8"/>
 
-        <activity android:name="com.example.platziconf.view.ui.activities.SplashScreenActivity"></activity>
-        <activity android:name=".view.ui.activities.MainActivity">
+        <activity android:name="com.example.platziconf.view.ui.activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.ui.activities.MainActivity"></activity>
     </application>
 
 </manifest>
